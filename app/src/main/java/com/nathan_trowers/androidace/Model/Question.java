@@ -42,6 +42,8 @@ public class Question extends RealmObject {
         return options;
     }
 
+
+
 //    //Option 2
 //    public String getOption2()
 //    {
@@ -102,7 +104,7 @@ public class Question extends RealmObject {
 //    {
 //        this.option4 = option4;
 //    }
-    /*END***Setters*/
+/*END***Setters*/
 }
 
 
