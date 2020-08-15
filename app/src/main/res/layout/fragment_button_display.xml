@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionsFragment">
+
+<!--Layout for Question 1-->
+    <Button
+        android:id="@+id/option1_utton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="option 1" />
+
+    <Button
+        android:id="@+id/option2_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="option 2" />
+
+    <Button
+        android:id="@+id/option3_button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="option 3" />
+
+    <Button
+        android:id="@+id/option4_button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="option 4" />
+
+    <view
+        android:layout_width="0dp"
+        android:layout_height="60dp" />
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:background="@color/colorAccent"/>
+</LinearLayout>

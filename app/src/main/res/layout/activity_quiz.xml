@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--Layout file that points to quiz layout components-->
+
+<!--Question-->
+    <fragment
+        android:name="com.nathan_trowers.androidace.QuestionFragment"
+        android:id="@+id/fragment_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<!--Choices-->
+    <fragment
+        android:name="com.nathan_trowers.androidace.OptionsFragment"
+        android:id="@+id/fragment_choices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

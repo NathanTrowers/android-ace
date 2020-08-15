@@ -6,5 +6,6 @@
 
     <!--This is a color for a question 11 picture's background-->
     <color name="textView">#B197DF</color>
-    <color name="text">#FFFFFF</color>
+    <color name="normal_text">#000000</color>
+    <color name="answerText">#FFFFFF</color>
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Pointer to the layout for small devices in portrait view-->
+<resources>
+    <item name="activity_quiz" type="layout">@layout/activity_quiz_twopane_port</item>
+</resources>

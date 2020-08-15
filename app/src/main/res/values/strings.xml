@@ -17,4 +17,9 @@
     <string name="textView">Text View</string>
     <string name="seekBar">Seek Bar</string>
 
+<!--Words for the 'submit', 'next question' and 'finish' buttons-->
+    <string name="submit">Submit</string>
+    <string name="next_question">Next Question</string>
+    <string name="finish_quiz">See Results</string>
+
 </resources>
