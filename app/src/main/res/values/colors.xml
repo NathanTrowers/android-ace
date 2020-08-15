@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#4DFFA6</color><!--'Android' Green-->
+    <color name="colorPrimaryDark">#DAA520</color><!--Golden Rod-->
+    <color name="colorAccent">#F8F8FF</color><!--Ghost White-->
 
-    <!--This is a color for a question 11 picture's background-->
-    <color name="textView">#B197DF</color>
-    <color name="normal_text">#000000</color>
-    <color name="answerText">#FFFFFF</color>
+    <!--Default Colors-->
+    <color name="normal_text">#000000</color><!--Black-->
+
+<!--Incorrect Answer Background-->
+    <color name="correctBackground">#CD5C5C</color><!--Indian Red-->
+
+
 </resources>

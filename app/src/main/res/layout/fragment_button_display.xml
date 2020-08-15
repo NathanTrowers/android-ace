@@ -8,25 +8,25 @@
 
 <!--Layout for Question 1-->
     <Button
-        android:id="@+id/option1_utton"
+        android:id="@+id/option1_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option 1" />
 
     <Button
-        android:id="@+id/option2_button2"
+        android:id="@+id/option2_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option 2" />
 
     <Button
-        android:id="@+id/option3_button3"
+        android:id="@+id/option3_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option 3" />
 
     <Button
-        android:id="@+id/option4_button4"
+        android:id="@+id/option4_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option 4" />
