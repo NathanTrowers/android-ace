@@ -5,6 +5,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:listViewStyle">@style/ListView</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,8 +21,52 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <!--Correct Answer-->
+
+    <!--Text View Style-->
+    <style name="TextView">
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+<!--BEGIN***Default Answer Option Background Section-->
+    <!--Button Style-->
+    <style name="Button" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+    <!--Check Box Style-->
+    <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+    <!--Radio Button Style-->
+    <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+    <!--List View Style-->
+    <style name="ListView" parent="android:style/Widget.ListView">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+<!--END***Default Answer Option Background Section-->
+
+<!--Selected Answer-->
+    <style name="chosenResponse">
+        <item name="android:background">@color/selected</item>
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+<!--Correct Answer-->
     <style name="correctResponse">
-        <item name="background"></item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+<!--Wrong Answer-->
+    <style name="wrongResponse">
+        <item name="android:background">@color/wrongBackground</item>
+        <item name="android:textColor">@color/normal_text</item>
     </style>
 </resources>

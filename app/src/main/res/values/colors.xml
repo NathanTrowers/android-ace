@@ -8,7 +8,8 @@
     <color name="normal_text">#000000</color><!--Black-->
 
 <!--Incorrect Answer Background-->
-    <color name="correctBackground">#CD5C5C</color><!--Indian Red-->
+    <color name="wrongBackground">#CD5C5C</color><!--Indian Red-->
 
-
+<!--Selected Answer Background-->
+    <color name="selected">#8C8386</color>
 </resources>
