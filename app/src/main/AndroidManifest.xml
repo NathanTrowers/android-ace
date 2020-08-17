@@ -3,7 +3,7 @@
     package="com.nathan_trowers.androidace">
     <!--The 'android:name' field is what will direct Gradle to connect to the Realm Database-->
     <application
-        android:name=".RealmDB"
+        android:name=".Model.RealmDB"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

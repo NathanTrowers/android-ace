@@ -5,41 +5,57 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.nathan_trowers.androidace.Model.Question;
+import com.nathan_trowers.androidace.Questions.Question1;
 
 import java.util.ArrayList;
 
 public class OptionsFragment extends Fragment {
 
-    @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-        // Placeholder Inflater
-        return inflater.inflate(R.layout.fragment_button_display, container, false);
-    }
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-
-}
-
-class layoutGenerator extends Fragment
-{
     /**BEGIN***Variable Declaration*/
-        View questionView ;
-    View questionView ;
-    View answerView ;
+    Question currentQuestion ;
+    View currentView;
     View resultsView ;
-    View questionView ;
     private CreateQuiz quiz = new CreateQuiz();                     //Object containing the quiz generating code
     private ArrayList<Question> questionBank = quiz.getQuizSet();   //ArrayList containing all questions
-    private Question question1 = questionBank.get(0);               //Question 1
+
+    /*Initiate Question objects*/
+    Question1 q1 = new Question1();
+//        Question2 q2 = new Question2();
+//        Question3 q3 = new Question3();
+//        Question4 q4 = new Question4();
+//        Question5 q5 = new Question5();
     /**END***Variable Declaration*/
+
+    @Override
+    public View onCreateView( LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState )
+    {
+        //Start the quiz
+        currentQuestion =  questionBank.get(0);
+        q1.getOptions(currentQuestion);
+        currentView = q1.onCreateView(inflater, container, savedInstanceState);
+//        for (int qNo = 0; qNo > 5; qNo++)
+//        {
+//            switch(qNo)
+//            {
+//                case 1:
+//                {   /*To Do:
+//                        optionPlacement
+//                        questionPlacement*/
+//                    break ;
+//                }
+//            }
+//        }
+
+        return currentView;
+    }
+//
+//    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//
+//    }
+
 }

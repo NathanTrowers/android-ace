@@ -34,6 +34,17 @@
         <item name="android:background">@color/colorAccent</item>
         <item name="android:textColor">@color/normal_text</item>
     </style>
+        <!--Submit Button-->
+        <style name="submitButton" parent="@android:style/Widget.Button">
+            <item name="android:background">@color/colorPrimaryDark</item>
+            <item name="android:textColor">@color/colorPrimary</item>
+        </style>
+        <!--Next Question Button-->
+        <style name="nextButton" parent="@android:style/Widget.Button">
+            <item name="android:background">@color/colorPrimaryDark</item>
+            <item name="android:textColor">@color/colorAccent</item>
+        </style>
+
     <!--Check Box Style-->
     <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:background">@color/colorAccent</item>
@@ -52,21 +63,21 @@
 <!--END***Default Answer Option Background Section-->
 
 <!--Selected Answer-->
-    <style name="chosenResponse">
-        <item name="android:background">@color/selected</item>
-        <item name="android:textColor">@color/normal_text</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+<!--    <style name="chosenResponse">-->
+<!--        <item name="android:background">@color/selected</item>-->
+<!--        <item name="android:textColor">@color/normal_text</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--    </style>-->
 
 <!--Correct Answer-->
-    <style name="correctResponse">
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-    </style>
+<!--    <style name="correctResponse">-->
+<!--        <item name="android:background">@color/colorPrimary</item>-->
+<!--        <item name="android:textColor">@color/colorPrimaryDark</item>-->
+<!--    </style>-->
 
 <!--Wrong Answer-->
-    <style name="wrongResponse">
-        <item name="android:background">@color/wrongBackground</item>
-        <item name="android:textColor">@color/normal_text</item>
-    </style>
+<!--    <style name="wrongResponse">-->
+<!--        <item name="android:background">@color/wrongBackground</item>-->
+<!--        <item name="android:textColor">@color/normal_text</item>-->
+<!--    </style>-->
 </resources>

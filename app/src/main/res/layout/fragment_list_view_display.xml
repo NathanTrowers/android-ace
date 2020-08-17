@@ -17,10 +17,10 @@
         android:layout_width="0dp"
         android:layout_height="60dp" />
     <Button
+        style="@style/submitButton"
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:background="@color/colorAccent" />
+        android:text="@string/submit" />
 
 </LinearLayout>

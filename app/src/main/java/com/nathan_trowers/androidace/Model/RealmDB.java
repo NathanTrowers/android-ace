@@ -1,12 +1,10 @@
-package com.nathan_trowers.androidace;
+package com.nathan_trowers.androidace.Model;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.res.Resources;
-import android.os.Bundle;
 import android.util.Log;
 
-import com.nathan_trowers.androidace.Model.Question;
+import com.nathan_trowers.androidace.R;
 
 import java.io.InputStream;
 

@@ -16,11 +16,17 @@ public class QuestionFragment extends Fragment{
             @Nullable Bundle savedInstanceState
     ) {
         //Get the view to display
+
         View questionView = inflater.inflate(R.layout.fragment_question, container, false);
 
         return questionView;
     }
 
+    ////////////////////////////TAke care of this after the options
+    public void questionPlacement()
+    {
+
+    }
 //    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 //        super.onViewCreated(view, savedInstanceState);
 //
