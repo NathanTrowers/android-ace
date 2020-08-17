@@ -13,13 +13,13 @@
         android:text="CheckBox" />
 
     <CheckBox
-        android:id="@+id/option2_checkBox3"
+        android:id="@+id/option2_checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CheckBox" />
 
     <CheckBox
-        android:id="@+id/option3_checkBox2"
+        android:id="@+id/option3_checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CheckBox" />

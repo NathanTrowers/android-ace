@@ -22,6 +22,8 @@ public class CreateQuiz {
     /**BEGIN***Variable Declaration*/
     ArrayList<Question> quizSet = new ArrayList<Question>();    //Stores all five of the selected quiz questions.
     Question[] randomFourQuestions  = new Question[4];          //Stores four select questions
+    public static int qNo = 0;                  //Trigger for moving to the  next question.
+    public static int correctAnswers = 0;
     /**END***Variable Declaration*/
 
     /*****************This method creates the questions to display.*/

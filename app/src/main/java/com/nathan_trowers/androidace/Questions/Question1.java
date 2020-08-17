@@ -10,10 +10,14 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.nathan_trowers.androidace.CreateQuiz;
 import com.nathan_trowers.androidace.Model.Question;
+import com.nathan_trowers.androidace.OptionsFragment;
+import com.nathan_trowers.androidace.QuestionFragment;
 import com.nathan_trowers.androidace.R;
 
 import java.util.Random;
@@ -25,14 +29,14 @@ public class Question1 extends Fragment implements View.OnClickListener {
         private Button option3;     //Shows third displayed option
         private Button option4;     //Shows fourth displayed option
         private Button submit;      //Shows the submit button's listener
-        private Button nextQ;//Shows the next question button's listener
+        private Button nextQ;       //Shows the next question button's listener
         private String[] responses= new String[4];  //Cache answer options' text for question
         protected boolean isOpt1 = false;     //Show if option 1 is selected
         protected boolean isOpt2 = false;     //Show if option 2 is selected
         protected boolean isOpt3 = false;     //Show if option 3 is selected
         protected boolean isOpt4 = false;     //Show if option 4 is selected
         protected Question currentQuestion;   //Cache the question
-        public int correctAnswers;         //Record the number of correct answers
+        public int correctAnswers = OptionsFragment.correctAnswers;         //Record the number of correct answers
 /**END***Variable Declaration*/
 
     /****************This method calls the question's view and initiates listeners*/
@@ -40,7 +44,7 @@ public class Question1 extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        View choicesView = inflater.inflate(R.layout.fragment_image_view_display, container, false);
+        View choicesView = inflater.inflate(R.layout.fragment_button_display, container, false);
 //        View questionView = inflater.inflate(R.layout.fragment_image_view_display, container, false);
 
         return choicesView;
@@ -118,7 +122,8 @@ public class Question1 extends Fragment implements View.OnClickListener {
             }
             case R.id.nextQuestionButton:
             {
-                Intent showNextQuery = new Intent(this.Question2.class);
+                CreateQuiz.qNo += 1;/*Breakpoint this variable in each class*/
+                Intent showNextQuery = new Intent(this, OptionsFragment.class);
                 this.startActivity(showNextQuery);
             }
 
