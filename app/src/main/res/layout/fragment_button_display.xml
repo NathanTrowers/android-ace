@@ -4,9 +4,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionsFragment">
+    tools:context=".QuestionFragment">
 
 <!--Layout for Question 1-->
+    <TextView
+        android:id="@+id/question_textTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question"/>
+
     <Button
         android:id="@+id/option1_button"
         android:layout_width="match_parent"
@@ -37,7 +43,10 @@
     <Button
         style="@style/submitButton"
         android:id="@+id/submitButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:layout_height="40dp"
         android:text="@string/submit" />
 </LinearLayout>

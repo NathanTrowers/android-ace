@@ -10,11 +10,4 @@
         android:id="@+id/fragment_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-<!--Choices-->
-    <fragment
-        android:name="com.nathan_trowers.androidace.OptionsFragment"
-        android:id="@+id/fragment_choices"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 </LinearLayout>

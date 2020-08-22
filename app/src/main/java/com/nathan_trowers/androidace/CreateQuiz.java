@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.nathan_trowers.androidace.Model.Number11;
 import com.nathan_trowers.androidace.Model.Question;
 
 import java.io.InputStream;
@@ -20,8 +21,8 @@ import io.realm.annotations.PrimaryKey;
 
 public class CreateQuiz {
     /**BEGIN***Variable Declaration*/
-    ArrayList<Question> quizSet = new ArrayList<Question>();    //Stores all five of the selected quiz questions.
-    Question[] randomFourQuestions  = new Question[4];          //Stores four select questions
+    private ArrayList<Question> quizSet = new ArrayList<Question>();    //Stores all five of the selected quiz questions.
+    private Question[] randomFourQuestions  = new Question[4];          //Stores four select questions
     public static int qNo = 0;                  //Trigger for moving to the  next question.
     public static int correctAnswers = 0;
     /**END***Variable Declaration*/
@@ -38,7 +39,6 @@ public class CreateQuiz {
         quizSet.add(randomFourQuestions[0]);    //Question 1
         quizSet.add(randomFourQuestions[1]);    //Question 2
         quizSet.add(randomFourQuestions[2]);    //Question 3
-        quizSet.add(questionFour);              //Question 4; this is always the same.
         quizSet.add(randomFourQuestions[3]);    //Question 5
 
         return quizSet;
@@ -66,56 +66,6 @@ public class CreateQuiz {
 
         return randomFourQuestions;
     }
-}
-
-/*==================This class contains data on the quiz question 11, outside of of the database.==================*/
-class Number11 extends Question
-{
-
-/*BEGIN***Variable Declaration*/
-    @PrimaryKey
-    private int questionNumber;
-    private String question;
-    private int answerPicture;
-    private int[] optionPictures = new int[4];
-/*END***Variable Declaration*/
-
-
-    //Constructor
-    public Number11()
-    {
-        this.questionNumber = 11;
-        this.question = "Which is a widget?";
-        this.answerPicture = R.drawable.seek_bar;
-        this.optionPictures[0] = R.drawable.button;
-        this.optionPictures[1] = R.drawable.chip;
-        this.optionPictures[2] = R.drawable.seek_bar;
-        this.optionPictures[3] = R.drawable.text_view;
-    }
-
-/*BEGIN***Getters*/
-
-    //Question Number
-    @Override
-    public int getQuestionNumber() {
-        return questionNumber;
-    }
-
-    //Question
-    public String getQuestion() {
-        return question;
-    }
-
-    //Answer Picture
-    public int getAnswerPicture() {
-        return answerPicture;
-    }
-
-    ///Option Pictures
-    public int[] getOptionPictures() {
-        return optionPictures;
-    }
-
-/*END***Getters*/
 
 }
+

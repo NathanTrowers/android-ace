@@ -7,30 +7,39 @@
     tools:context=".QuestionFragment">
 
 <!--Layout for Question 4-->
+    <TextView
+        android:id="@+id/question_textTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question"/>
 
     <ImageView
         android:id="@+id/option1_imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/button" />
+        app:srcCompat="@drawable/button"
+        android:padding="10px"/>
 
     <ImageView
         android:id="@+id/option2_imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/button" />
+        app:srcCompat="@drawable/button"
+        android:padding="10px"/>
 
     <ImageView
         android:id="@+id/option3_imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/button" />
+        app:srcCompat="@drawable/button"
+        android:padding="10px"/>
 
     <ImageView
         android:id="@+id/option4_imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/button" />
+        app:srcCompat="@drawable/button"
+        android:padding="10px"/>
 
     <view
         android:layout_width="0dp"
@@ -38,8 +47,11 @@
     <Button
         style="@style/submitButton"
         android:id="@+id/submitButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:layout_height="40dp"
+        android:text="@string/submit" />
 
 </LinearLayout>

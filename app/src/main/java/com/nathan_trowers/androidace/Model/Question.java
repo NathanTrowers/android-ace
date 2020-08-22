@@ -87,6 +87,7 @@ public class Question extends RealmObject {
         this.options = options;
     }
 
+
 //    //Option 2
 //    private void setOption2( String option2)
 //    {
