@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4DFFA6</color><!--'Android' Green-->
-    <color name="colorPrimaryDark">#DAA520</color><!--Golden Rod-->
-    <color name="colorAccent">#F8F8FF</color><!--Ghost White-->
-
-    <!--Default Colors-->
-    <color name="normal_text">#000000</color><!--Black-->
-
-<!--Incorrect Answer Background-->
-    <color name="wrongBackground">#CD5C5C</color><!--Indian Red-->
-
-<!--Selected Answer Background-->
-    <color name="selected">#8C8386</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#009688</color>
+    <color name="secondaryColor">#E91E63</color>
+    <color name="accentColor">#8FCCB6F3</color>
 </resources>
