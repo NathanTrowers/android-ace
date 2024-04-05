@@ -26,7 +26,7 @@ public class WelcomePageInstrumentedTest {
         /* Act */
         onView(withId(R.id.button_start)).perform(click());
 
-        /** Assert */
-        onView(withId(R.id.button_second)).check(matches(withText("Previous")));
+        /* Assert */
+        onView(withId(R.id.button_question_2_next)).check(matches(withText("Next Question")));
     }
 }
