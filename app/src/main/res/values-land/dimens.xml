@@ -1,4 +1,11 @@
 <resources>
     <dimen name="fab_margin">48dp</dimen>
-    <dimen name="title_size">50sp</dimen>
+    <dimen name="title_size">30sp</dimen>
+    <dimen name="question_size">16sp</dimen>
+    <dimen name="question_margin_top">2sp</dimen>
+    <dimen name="option_margin">20sp</dimen>
+    <dimen name="option_gap_margin">10sp</dimen>
+    <dimen name="first_option_gap_margin">20sp</dimen>
+    <dimen name="next_button_margin_bottom">4sp</dimen>
+    <dimen name="score_size">50sp</dimen>
 </resources>
