@@ -14,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class QuestionService extends Service {
+
     private final IBinder mBinder = new QuestionBinder();
     private static final String TAG = "QuestionService";
     private JSONArray allQuestionsAndAnswers;
