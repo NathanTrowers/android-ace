@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accentColor"
+    tools:context=".QuestionThreeFragment">
+
+    <TextView
+        android:id="@+id/textview_question_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_size"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:textSize="@dimen/title_size"
+        android:text="@string/question_placeholder_text"
+        android:textColor="@color/primaryColor"
+        android:layout_gravity="top"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <RadioButton
+            android:id="@+id/radioButton_question3_option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:backgroundTint="@color/accentColor"
+            android:text="@string/option_placeholder_text"
+            android:textSize="@dimen/checkbox_text_size" />
+        <RadioButton
+            android:id="@+id/radioButton_question3_option_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:backgroundTint="@color/accentColor"
+            android:text="@string/option_placeholder_text"
+            android:textSize="@dimen/checkbox_text_size" />
+        <RadioButton
+            android:id="@+id/radioButton_question3_option_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:backgroundTint="@color/accentColor"
+            android:text="@string/option_placeholder_text"
+            android:textSize="@dimen/checkbox_text_size" />
+        <RadioButton
+            android:id="@+id/radioButton_question3_option_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:backgroundTint="@color/accentColor"
+            android:text="@string/option_placeholder_text"
+            android:textSize="@dimen/checkbox_text_size" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_question_4_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@color/primaryColor"
+        android:text="@string/next_question"
+        android:textSize="@dimen/checkbox_text_size"
+        android:layout_marginBottom="@dimen/next_button_margin_bottom"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@null" />
+</FrameLayout>
