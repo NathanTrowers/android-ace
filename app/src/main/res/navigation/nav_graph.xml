@@ -11,12 +11,21 @@
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
     </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.not.androidace.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
     </fragment>
+
+    <fragment
+        android:id="@+id/QuestionTwoFragment"
+        android:name="com.not.androidace.QuestionTwoFragment"
+        android:label="@string/question_two_fragment_label"
+        tools:layout="@layout/fragment_question_two">
+    </fragment>
+
     <fragment
         android:id="@+id/ScoreFragment"
         android:name="com.not.androidace.ScoreFragment"
