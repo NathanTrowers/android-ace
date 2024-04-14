@@ -29,8 +29,29 @@ public class QuizRunThroughInstrumentedTest {
         onView(withId(R.id.button_question_1_option_4)).perform(click()); // correct answer
         onView(withId(R.id.button_question_2_next)).perform(click());
 
+        onView(withId(R.id.checkBox_question_2_option_1)).perform(click());
+        onView(withId(R.id.button_question_3_next)).perform(click());
+
         /* Assert */
         onView(withId(R.id.textview_score)).check(matches(withText("1")));
+        onView(withId(R.id.textview_score_message)).check(matches(withText("Please try again.")));
+        onView(withId(R.id.button_take_new_quiz)).check(matches(withText("TRY AGAIN")));
+    }
+
+    @Test
+    public void testQuizWhenTwoResponsesAreRight() {
+        /* Act */
+        onView(withId(R.id.button_start)).perform(click());
+        onView(withId(R.id.button_question_1_option_1)).perform(click());
+        onView(withId(R.id.button_question_1_option_4)).perform(click()); // correct answer
+        onView(withId(R.id.button_question_2_next)).perform(click());
+
+        onView(withId(R.id.checkBox_question_2_option_1)).perform(click());
+        onView(withId(R.id.checkBox_question_2_option_4)).perform(click()); // correct answer
+        onView(withId(R.id.button_question_3_next)).perform(click());
+
+        /* Assert */
+        onView(withId(R.id.textview_score)).check(matches(withText("2")));
         onView(withId(R.id.textview_score_message)).check(matches(withText("Please try again.")));
         onView(withId(R.id.button_take_new_quiz)).check(matches(withText("TRY AGAIN")));
     }
@@ -41,6 +62,9 @@ public class QuizRunThroughInstrumentedTest {
         onView(withId(R.id.button_start)).perform(click());
         onView(withId(R.id.button_question_1_option_1)).perform(click()); //wrong answer
         onView(withId(R.id.button_question_2_next)).perform(click());
+
+        onView(withId(R.id.checkBox_question_2_option_1)).perform(click()); //wrong answer
+        onView(withId(R.id.button_question_3_next)).perform(click());
 
         /* Assert */
         onView(withId(R.id.textview_score)).check(matches(withText("0")));

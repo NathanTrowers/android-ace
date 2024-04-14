@@ -93,7 +93,7 @@ public class SecondFragment extends Fragment {
         mBoundQuestionService.markQuestion(1, responseNumber);
 
         NavHostFragment.findNavController(SecondFragment.this)
-                .navigate(R.id.ScoreFragment);//set to question 2 instead
+                .navigate(R.id.QuestionTwoFragment);
     }
 
     public void showOptions() {
