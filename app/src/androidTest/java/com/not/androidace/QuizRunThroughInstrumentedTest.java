@@ -29,11 +29,14 @@ public class QuizRunThroughInstrumentedTest {
         onView(withId(R.id.button_question_1_option_4)).perform(click()); // correct answer
         onView(withId(R.id.button_question_2_next)).perform(click());
 
-        onView(withId(R.id.checkBox_question_2_option_1)).perform(click());
+        onView(withId(R.id.checkBox_question_2_option_1)).perform(click()); //wrong answer
         onView(withId(R.id.button_question_3_next)).perform(click());
 
-        onView(withId(R.id.radioButton_question3_option_1)).perform(click());
+        onView(withId(R.id.radioButton_question3_option_1)).perform(click()); //wrong answer
         onView(withId(R.id.button_question_4_next)).perform(click());
+
+        onView(withId(R.id.imageView_question_4_option_1)).perform(click()); //wrong answer
+        onView(withId(R.id.button_question_5_next)).perform(click());
 
         /* Assert */
         onView(withId(R.id.textview_score)).check(matches(withText("1")));
@@ -55,6 +58,9 @@ public class QuizRunThroughInstrumentedTest {
 
         onView(withId(R.id.radioButton_question3_option_1)).perform(click()); //wrong answer
         onView(withId(R.id.button_question_4_next)).perform(click());
+
+        onView(withId(R.id.imageView_question_4_option_1)).perform(click()); //wrong answer
+        onView(withId(R.id.button_question_5_next)).perform(click());
 
         /* Assert */
         onView(withId(R.id.textview_score)).check(matches(withText("2")));
@@ -78,9 +84,38 @@ public class QuizRunThroughInstrumentedTest {
         onView(withId(R.id.radioButton_question3_option_4)).perform(click()); // correct answer
         onView(withId(R.id.button_question_4_next)).perform(click());
 
+        onView(withId(R.id.imageView_question_4_option_1)).perform(click()); //wrong answer
+        onView(withId(R.id.button_question_5_next)).perform(click());
+
         /* Assert */
         onView(withId(R.id.textview_score)).check(matches(withText("3")));
         onView(withId(R.id.textview_score_message)).check(matches(withText("Good job!")));
+        onView(withId(R.id.button_take_new_quiz)).check(matches(withText("TAKE ANOTHER QUIZ")));
+    }
+
+    @Test
+    public void testQuizWhenFourResponsesAreRight() {
+        /* Act */
+        onView(withId(R.id.button_start)).perform(click());
+        onView(withId(R.id.button_question_1_option_1)).perform(click());
+        onView(withId(R.id.button_question_1_option_4)).perform(click()); // correct answer
+        onView(withId(R.id.button_question_2_next)).perform(click());
+
+        onView(withId(R.id.checkBox_question_2_option_1)).perform(click());
+        onView(withId(R.id.checkBox_question_2_option_4)).perform(click()); // correct answer
+        onView(withId(R.id.button_question_3_next)).perform(click());
+
+        onView(withId(R.id.radioButton_question3_option_1)).perform(click());
+        onView(withId(R.id.radioButton_question3_option_4)).perform(click()); // correct answer
+        onView(withId(R.id.button_question_4_next)).perform(click());
+
+        onView(withId(R.id.imageView_question_4_option_1)).perform(click());
+        onView(withId(R.id.imageView_question_4_option_3)).perform(click()); //correct answer
+        onView(withId(R.id.button_question_5_next)).perform(click());
+
+        /* Assert */
+        onView(withId(R.id.textview_score)).check(matches(withText("4")));
+        onView(withId(R.id.textview_score_message)).check(matches(withText("Excellent work!")));
         onView(withId(R.id.button_take_new_quiz)).check(matches(withText("TAKE ANOTHER QUIZ")));
     }
 
@@ -96,6 +131,9 @@ public class QuizRunThroughInstrumentedTest {
 
         onView(withId(R.id.radioButton_question3_option_1)).perform(click()); //wrong answer
         onView(withId(R.id.button_question_4_next)).perform(click());
+
+        onView(withId(R.id.imageView_question_4_option_1)).perform(click()); //wrong answer
+        onView(withId(R.id.button_question_5_next)).perform(click());
 
         /* Assert */
         onView(withId(R.id.textview_score)).check(matches(withText("0")));
