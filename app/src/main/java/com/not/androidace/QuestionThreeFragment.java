@@ -91,7 +91,7 @@ public class QuestionThreeFragment extends Fragment {
         mBoundQuestionService.markQuestion(3, responseNumber);
 
         NavHostFragment.findNavController(QuestionThreeFragment.this)
-                .navigate(R.id.ScoreFragment);//set to question 4 instead
+                .navigate(R.id.QuestionFourFragment);
     }
 
     public void showOptions() {
