@@ -17,17 +17,16 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.not.androidace.databinding.FragmentQuestionTwoBinding;
+import com.not.androidace.databinding.FragmentQuestionThreeBinding;
 import com.not.androidace.service.QuestionService;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class QuestionTwoFragment extends Fragment {
+public class QuestionThreeFragment extends Fragment {
 
-    private FragmentQuestionTwoBinding binding;
-    private static final String TAG = "QuestionTwoFragment";
+    private FragmentQuestionThreeBinding binding;
+    private static final String TAG = "QuestionThreeFragment";
     private QuestionService mBoundQuestionService = null;
     private int responseNumber = 0;
 
@@ -46,8 +45,8 @@ public class QuestionTwoFragment extends Fragment {
 
     @Override
     public View onCreateView(
-            @NotNull LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
+            @NonNull LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState
     ) {
         Context currentContext = this.getContext();
         if(!(currentContext.bindService(new Intent(currentContext, QuestionService.class),
@@ -56,7 +55,7 @@ public class QuestionTwoFragment extends Fragment {
                     "or is inaccessible.");
         }
 
-        binding = FragmentQuestionTwoBinding.inflate(inflater, container, false);
+        binding =  FragmentQuestionThreeBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
     }
@@ -64,20 +63,20 @@ public class QuestionTwoFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonQuestion3Next.setOnClickListener(v ->
+        binding.buttonQuestion4Next.setOnClickListener(v ->
                 moveToNextQuestion()
         );
 
-        binding.checkBoxQuestion2Option1.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
+        binding.radioButtonQuestion3Option1.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
                 markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_1, 0)
         );
-        binding.checkBoxQuestion2Option2.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
+        binding.radioButtonQuestion3Option2.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
                 markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_2, 1)
         );
-        binding.checkBoxQuestion2Option3.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
+        binding.radioButtonQuestion3Option3.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
                 markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_3, 2)
         );
-        binding.checkBoxQuestion2Option4.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
+        binding.radioButtonQuestion3Option4.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
                 markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_4, 3)
         );
     }
@@ -89,22 +88,22 @@ public class QuestionTwoFragment extends Fragment {
     }
 
     public void moveToNextQuestion() {
-        mBoundQuestionService.markQuestion(2, responseNumber);
+        mBoundQuestionService.markQuestion(3, responseNumber);
 
-        NavHostFragment.findNavController(QuestionTwoFragment.this)
-                .navigate(R.id.QuestionThreeFragment);
+        NavHostFragment.findNavController(QuestionThreeFragment.this)
+                .navigate(R.id.ScoreFragment);//set to question 4 instead
     }
 
     public void showOptions() {
         try {
-            JSONObject questionOne = mBoundQuestionService.getQuestion(2);
-            binding.textviewQuestion2.setText(questionOne.getString("question"));
+            JSONObject questionOne = mBoundQuestionService.getQuestion(3);
+            binding.textviewQuestion3.setText(questionOne.getString("question"));
 
             JSONArray options = questionOne.getJSONArray("options");
-            binding.checkBoxQuestion2Option1.setText(options.getString(0));
-            binding.checkBoxQuestion2Option2.setText(options.getString(1));
-            binding.checkBoxQuestion2Option3.setText(options.getString(2));
-            binding.checkBoxQuestion2Option4.setText(options.getString(3));
+            binding.radioButtonQuestion3Option1.setText(options.getString(0));
+            binding.radioButtonQuestion3Option2.setText(options.getString(1));
+            binding.radioButtonQuestion3Option3.setText(options.getString(2));
+            binding.radioButtonQuestion3Option4.setText(options.getString(3));
 
         } catch(Exception exception) {
             Snackbar.make(this.getView(), "Something went wrong while preparing this part of the quiz", Snackbar.LENGTH_LONG)
@@ -119,28 +118,28 @@ public class QuestionTwoFragment extends Fragment {
                              int option
     ) {
         if (checkBoxId == R.id.checkBox_question_2_option_1) {
-            binding.checkBoxQuestion2Option1.setChecked(isChecked);
-            binding.checkBoxQuestion2Option2.setChecked(false);
-            binding.checkBoxQuestion2Option3.setChecked(false);
-            binding.checkBoxQuestion2Option4.setChecked(false);
+            binding.radioButtonQuestion3Option1.setChecked(isChecked);
+            binding.radioButtonQuestion3Option2.setChecked(false);
+            binding.radioButtonQuestion3Option3.setChecked(false);
+            binding.radioButtonQuestion3Option4.setChecked(false);
         }
         if (checkBoxId == R.id.checkBox_question_2_option_2) {
-            binding.checkBoxQuestion2Option1.setChecked(false);
-            binding.checkBoxQuestion2Option2.setChecked(isChecked);
-            binding.checkBoxQuestion2Option3.setChecked(false);
-            binding.checkBoxQuestion2Option4.setChecked(false);
+            binding.radioButtonQuestion3Option1.setChecked(false);
+            binding.radioButtonQuestion3Option2.setChecked(isChecked);
+            binding.radioButtonQuestion3Option3.setChecked(false);
+            binding.radioButtonQuestion3Option4.setChecked(false);
         }
         if (checkBoxId == R.id.checkBox_question_2_option_3) {
-            binding.checkBoxQuestion2Option1.setChecked(false);
-            binding.checkBoxQuestion2Option2.setChecked(false);
-            binding.checkBoxQuestion2Option3.setChecked(isChecked);
-            binding.checkBoxQuestion2Option4.setChecked(false);
+            binding.radioButtonQuestion3Option1.setChecked(false);
+            binding.radioButtonQuestion3Option2.setChecked(false);
+            binding.radioButtonQuestion3Option3.setChecked(isChecked);
+            binding.radioButtonQuestion3Option4.setChecked(false);
         }
         if (checkBoxId == R.id.checkBox_question_2_option_4) {
-            binding.checkBoxQuestion2Option1.setChecked(false);
-            binding.checkBoxQuestion2Option2.setChecked(false);
-            binding.checkBoxQuestion2Option3.setChecked(false);
-            binding.checkBoxQuestion2Option4.setChecked(isChecked);
+            binding.radioButtonQuestion3Option1.setChecked(false);
+            binding.radioButtonQuestion3Option2.setChecked(false);
+            binding.radioButtonQuestion3Option3.setChecked(false);
+            binding.radioButtonQuestion3Option4.setChecked(isChecked);
         }
 
         responseNumber = option;

@@ -27,6 +27,13 @@
     </fragment>
 
     <fragment
+        android:id="@+id/QuestionThreeFragment"
+        android:name="com.not.androidace.QuestionThreeFragment"
+        android:label="@string/question_three_fragment_label"
+        tools:layout="@layout/fragment_question_three">
+    </fragment>
+
+    <fragment
         android:id="@+id/ScoreFragment"
         android:name="com.not.androidace.ScoreFragment"
         android:label="@string/score_fragment_label"

@@ -7,6 +7,7 @@
     <string name="first_fragment_label">Welcome</string>
     <string name="second_fragment_label">Question 1</string>
     <string name="question_two_fragment_label">Question 2</string>
+    <string name="question_three_fragment_label">Question 3</string>
     <string name="score_fragment_label">Quiz Results</string>
 <!--  For Multiple Fragments  -->
     <string name="next_question">Next Question</string>
