@@ -12,4 +12,7 @@
     <dimen name="checkbox_text_size">20sp</dimen>
     <dimen name="button_linear_layout_next_text_size">10sp</dimen>
     <dimen name="image_view_padding">10sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="list_view_width">378sp</dimen>
+    <dimen name="list_view_height">378sp</dimen>
 </resources>

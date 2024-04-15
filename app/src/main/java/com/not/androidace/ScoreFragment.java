@@ -60,7 +60,7 @@ public class ScoreFragment extends Fragment {
 
         binding.buttonTakeNewQuiz.setOnClickListener(v ->
             NavHostFragment.findNavController(ScoreFragment.this)
-                    .navigate(R.id.FirstFragment)
+                    .navigate(R.id.SecondFragment)
         );
     }
 
