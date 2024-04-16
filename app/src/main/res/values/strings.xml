@@ -16,7 +16,7 @@
     <string name="question_placeholder_text">Waiting for question to appear…</string>
     <string name="option_placeholder_text">Finding option…</string>
 <!--  FirstFragment  -->
-    <string name="welcome_text_view_message">WELCOME TO ANDROID ACE!</string>
+    <string name="welcome_text_view_message">WELCOME TO ANDROIDACE!</string>
     <string name="start_button_text">START A QUIZ</string>
 <!-- ScoreFragment -->
     <string name="score_intro_text">Your final score is:</string>
