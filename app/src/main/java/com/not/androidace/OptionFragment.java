@@ -59,6 +59,7 @@ public class OptionFragment extends Fragment {
             mBoundQuestionService = null;
         }
     };
+
     @SuppressWarnings("unused")
     public static OptionFragment newInstance(int columnCount) {
         OptionFragment fragment = new OptionFragment();
