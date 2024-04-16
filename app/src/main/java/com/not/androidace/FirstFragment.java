@@ -22,6 +22,7 @@ public class FirstFragment extends Fragment {
     ) {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
+
         return binding.getRoot();
     }
 

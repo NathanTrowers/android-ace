@@ -39,6 +39,9 @@ dependencies {
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
     implementation libs.rules
+    implementation libs.legacy.support.v4
+    implementation libs.recyclerview
+    implementation libs.espresso.contrib
     testImplementation libs.junit
     testImplementation libs.mockito.core
     androidTestImplementation libs.ext.junit

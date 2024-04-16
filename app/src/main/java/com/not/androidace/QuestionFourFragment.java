@@ -24,7 +24,6 @@ import com.google.android.material.snackbar.Snackbar;
 import com.not.androidace.databinding.FragmentQuestionFourBinding;
 import com.not.androidace.service.QuestionService;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -49,7 +48,7 @@ public class QuestionFourFragment extends Fragment {
     };
 
     @Override
-    public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState
     ) {
         Context currentContext = this.getContext();
@@ -95,7 +94,7 @@ public class QuestionFourFragment extends Fragment {
         mBoundQuestionService.markQuestion(4, responseNumber);
 
         NavHostFragment.findNavController(QuestionFourFragment.this)
-                .navigate(R.id.ScoreFragment); //set to question 5 instead
+                .navigate(R.id.OptionFragment);
     }
 
     public void showOptions() {

@@ -20,7 +20,6 @@ import com.google.android.material.snackbar.Snackbar;
 import com.not.androidace.databinding.FragmentQuestionTwoBinding;
 import com.not.androidace.service.QuestionService;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -46,7 +45,7 @@ public class QuestionTwoFragment extends Fragment {
 
     @Override
     public View onCreateView(
-            @NotNull LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
         Context currentContext = this.getContext();

@@ -41,6 +41,13 @@
     </fragment>
 
     <fragment
+        android:id="@+id/OptionFragment"
+        android:name="com.not.androidace.OptionFragment"
+        android:label="@string/option_fragment_label"
+        tools:layout="@layout/fragment_option_list">
+    </fragment>
+
+    <fragment
         android:id="@+id/ScoreFragment"
         android:name="com.not.androidace.ScoreFragment"
         android:label="@string/score_fragment_label"
