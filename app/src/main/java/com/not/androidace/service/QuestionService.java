@@ -15,11 +15,11 @@ import java.util.Random;
 
 public class QuestionService extends Service {
 
-    private final IBinder mBinder = new QuestionBinder();
     private static final String TAG = "QuestionService";
     private JSONArray allQuestionsAndAnswers;
-    private JSONArray questionSet = new JSONArray();
+    private final IBinder mBinder = new QuestionBinder();
     private int numberOfCorrectResponses;
+    private JSONArray questionSet = new JSONArray();
 
     public class QuestionBinder extends Binder {
         public QuestionService getService() {

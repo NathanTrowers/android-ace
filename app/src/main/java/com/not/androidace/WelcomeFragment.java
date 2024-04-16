@@ -9,19 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.not.androidace.databinding.FragmentFirstBinding;
+import com.not.androidace.databinding.FragmentWelcomeBinding;
 
-public class FirstFragment extends Fragment {
+public class WelcomeFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentWelcomeBinding binding;
 
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentWelcomeBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
     }
@@ -30,8 +29,8 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.buttonStart.setOnClickListener(v ->
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.SecondFragment)
+                NavHostFragment.findNavController(WelcomeFragment.this)
+                        .navigate(R.id.QuestionOneFragment)
         );
     }
 

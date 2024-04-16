@@ -18,16 +18,16 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.not.androidace.databinding.FragmentSecondBinding;
+import com.not.androidace.databinding.FragmentQuestionOneBinding;
 import com.not.androidace.service.QuestionService;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class SecondFragment extends Fragment {
+public class QuestionOneFragment extends Fragment {
 
-    private FragmentSecondBinding binding;
-    private static final String TAG = "SecondFragment";
+    private static final String TAG = "QuestionOneFragment";
+    private FragmentQuestionOneBinding binding;
     private QuestionService mBoundQuestionService = null;
     private int responseNumber = 0;
 
@@ -57,7 +57,7 @@ public class SecondFragment extends Fragment {
                     "or is inaccessible.");
         }
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentQuestionOneBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
     }
@@ -92,7 +92,7 @@ public class SecondFragment extends Fragment {
     public void moveToNextQuestion() {
         mBoundQuestionService.markQuestion(1, responseNumber);
 
-        NavHostFragment.findNavController(SecondFragment.this)
+        NavHostFragment.findNavController(QuestionOneFragment.this)
                 .navigate(R.id.QuestionTwoFragment);
     }
 

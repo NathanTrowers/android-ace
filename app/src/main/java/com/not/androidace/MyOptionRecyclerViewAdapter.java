@@ -10,23 +10,23 @@ import androidx.annotation.ColorInt;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.not.androidace.databinding.FragmentOptionBinding;
-import com.not.androidace.placeholder.PlaceholderContent.PlaceholderItem;
+import com.not.androidace.placeholder.OptionItem;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
+ * {@link RecyclerView.Adapter} that can display a {@link OptionItem}.
  *
  * Display received options data
  * Show when option selected and report selection to OptionFragment.
  */
 public class MyOptionRecyclerViewAdapter extends RecyclerView.Adapter<MyOptionRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
     private OnItemClickListener mListener;
     private int mSelectdPosition = -1;
+    private final List<OptionItem> mValues;
 
-    public MyOptionRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public MyOptionRecyclerViewAdapter(List<OptionItem> items) {
         mValues = items;
     }
 
@@ -52,7 +52,7 @@ public class MyOptionRecyclerViewAdapter extends RecyclerView.Adapter<MyOptionRe
             holder.mContentView.setTextColor(textColor);
 
             String optionNumber = holder.mIdView.getText().toString();
-            OptionFragment.responseNumber = Integer.parseInt(optionNumber);
+            QuestionFiveFragment.responseNumber = Integer.parseInt(optionNumber);
         } else {
             backgroundColor = Color.argb(100,233,30,99);
             textColor = Color.argb(100,0,0,0);
@@ -84,7 +84,7 @@ public class MyOptionRecyclerViewAdapter extends RecyclerView.Adapter<MyOptionRe
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView mIdView;
         public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public OptionItem mItem;
 
         public ViewHolder(FragmentOptionBinding binding, final OnItemClickListener listener) {
           super(binding.getRoot());

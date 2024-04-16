@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/accentColor"
-    tools:context=".OptionFragment">
+    tools:context=".QuestionFiveFragment">
 
     <TextView
         android:id="@+id/textview_question_5"

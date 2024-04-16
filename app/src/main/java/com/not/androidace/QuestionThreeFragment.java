@@ -25,8 +25,8 @@ import org.json.JSONObject;
 
 public class QuestionThreeFragment extends Fragment {
 
-    private FragmentQuestionThreeBinding binding;
     private static final String TAG = "QuestionThreeFragment";
+    private FragmentQuestionThreeBinding binding;
     private QuestionService mBoundQuestionService = null;
     private int responseNumber = 0;
 
@@ -46,7 +46,7 @@ public class QuestionThreeFragment extends Fragment {
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState
+            Bundle savedInstanceState
     ) {
         Context currentContext = this.getContext();
         if(!(currentContext.bindService(new Intent(currentContext, QuestionService.class),
@@ -68,16 +68,16 @@ public class QuestionThreeFragment extends Fragment {
         );
 
         binding.radioButtonQuestion3Option1.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_1, 0)
+                markSelected(isChecked, R.id.checkBox_question_2_option_1, 0)
         );
         binding.radioButtonQuestion3Option2.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_2, 1)
+                markSelected(isChecked, R.id.checkBox_question_2_option_2, 1)
         );
         binding.radioButtonQuestion3Option3.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_3, 2)
+                markSelected(isChecked, R.id.checkBox_question_2_option_3, 2)
         );
         binding.radioButtonQuestion3Option4.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_4, 3)
+                markSelected(isChecked, R.id.checkBox_question_2_option_4, 3)
         );
     }
 
@@ -114,9 +114,7 @@ public class QuestionThreeFragment extends Fragment {
         }
     }
 
-    public void markSelected(CompoundButton compoundButton, boolean isChecked, int checkBoxId,
-                             int option
-    ) {
+    public void markSelected(boolean isChecked, int checkBoxId, int option) {
         if (checkBoxId == R.id.checkBox_question_2_option_1) {
             binding.radioButtonQuestion3Option1.setChecked(isChecked);
             binding.radioButtonQuestion3Option2.setChecked(false);

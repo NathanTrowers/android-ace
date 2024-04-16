@@ -25,8 +25,8 @@ import org.json.JSONObject;
 
 public class QuestionTwoFragment extends Fragment {
 
-    private FragmentQuestionTwoBinding binding;
     private static final String TAG = "QuestionTwoFragment";
+    private FragmentQuestionTwoBinding binding;
     private QuestionService mBoundQuestionService = null;
     private int responseNumber = 0;
 
@@ -68,16 +68,16 @@ public class QuestionTwoFragment extends Fragment {
         );
 
         binding.checkBoxQuestion2Option1.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_1, 0)
+                markSelected(isChecked, R.id.checkBox_question_2_option_1, 0)
         );
         binding.checkBoxQuestion2Option2.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_2, 1)
+                markSelected(isChecked, R.id.checkBox_question_2_option_2, 1)
         );
         binding.checkBoxQuestion2Option3.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_3, 2)
+                markSelected(isChecked, R.id.checkBox_question_2_option_3, 2)
         );
         binding.checkBoxQuestion2Option4.setOnCheckedChangeListener((CompoundButton compoundButton, boolean isChecked) ->
-                markSelected(compoundButton, isChecked, R.id.checkBox_question_2_option_4, 3)
+                markSelected(isChecked, R.id.checkBox_question_2_option_4, 3)
         );
     }
 
@@ -114,9 +114,7 @@ public class QuestionTwoFragment extends Fragment {
         }
     }
 
-    public void markSelected(CompoundButton compoundButton, boolean isChecked, int checkBoxId,
-                             int option
-    ) {
+    public void markSelected(boolean isChecked, int checkBoxId, int option) {
         if (checkBoxId == R.id.checkBox_question_2_option_1) {
             binding.checkBoxQuestion2Option1.setChecked(isChecked);
             binding.checkBoxQuestion2Option2.setChecked(false);

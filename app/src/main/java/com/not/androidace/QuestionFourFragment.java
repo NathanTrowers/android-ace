@@ -29,8 +29,8 @@ import org.json.JSONObject;
 
 public class QuestionFourFragment extends Fragment {
 
-    private FragmentQuestionFourBinding binding;
     private static final String TAG = "QuestionFourFragment";
+    private FragmentQuestionFourBinding binding;
     private QuestionService mBoundQuestionService = null;
     private int responseNumber = 0;
 
@@ -48,8 +48,9 @@ public class QuestionFourFragment extends Fragment {
     };
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState
+    public View onCreateView(
+            @NonNull LayoutInflater inflater, ViewGroup container,
+             Bundle savedInstanceState
     ) {
         Context currentContext = this.getContext();
         if(!(currentContext.bindService(new Intent(currentContext, QuestionService.class),
@@ -94,7 +95,7 @@ public class QuestionFourFragment extends Fragment {
         mBoundQuestionService.markQuestion(4, responseNumber);
 
         NavHostFragment.findNavController(QuestionFourFragment.this)
-                .navigate(R.id.OptionFragment);
+                .navigate(R.id.QuestionFiveFragment);
     }
 
     public void showOptions() {

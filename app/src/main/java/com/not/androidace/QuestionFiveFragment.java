@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.not.androidace.databinding.FragmentOptionListBinding;
-import com.not.androidace.placeholder.PlaceholderContent;
+import com.not.androidace.databinding.FragmentQuestionFiveBinding;
+import com.not.androidace.placeholder.OptionItem;
 import com.not.androidace.service.QuestionService;
 
 import org.jetbrains.annotations.NotNull;
@@ -31,21 +31,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A fragment representing a list of Items.
+ * A fragment representing a list of items.
  *
  * Get Data and send  it to the adaptor
- * get selected response number and send data to QuestionService for marking
+ * Get response number set in MyOptionRecyclerViewAdapter and send data to QuestionService for marking
  */
-public class OptionFragment extends Fragment {
+public class QuestionFiveFragment extends Fragment {
 
-    public static int responseNumber;
     private static final String ARG_COLUMN_COUNT = "column-count";
-    private static final String TAG = "OptionFragment";
-    private FragmentOptionListBinding binding;
-    private QuestionService mBoundQuestionService = null;
+    private static final String TAG = "QuestionFiveFragment";
+    public static int responseNumber;
+    private FragmentQuestionFiveBinding binding;
+    private List<OptionItem> items = new ArrayList<OptionItem>();
     private int mColumnCount = 1;
+    private QuestionService mBoundQuestionService = null;
     private MyOptionRecyclerViewAdapter myOptionRecyclerViewAdapter;
-    private List<PlaceholderContent.PlaceholderItem> items = new ArrayList<PlaceholderContent.PlaceholderItem>();
 
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -61,8 +61,8 @@ public class OptionFragment extends Fragment {
     };
 
     @SuppressWarnings("unused")
-    public static OptionFragment newInstance(int columnCount) {
-        OptionFragment fragment = new OptionFragment();
+    public static QuestionFiveFragment newInstance(int columnCount) {
+        QuestionFiveFragment fragment = new QuestionFiveFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -74,7 +74,7 @@ public class OptionFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public OptionFragment() {}
+    public QuestionFiveFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -99,7 +99,7 @@ public class OptionFragment extends Fragment {
 
         myOptionRecyclerViewAdapter = new MyOptionRecyclerViewAdapter(items);
 
-        binding = FragmentOptionListBinding.inflate(inflater, container, false);
+        binding = FragmentQuestionFiveBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
     }
@@ -117,7 +117,7 @@ public class OptionFragment extends Fragment {
     public void moveToResults() {
         mBoundQuestionService.markQuestion(5, responseNumber);
 
-        NavHostFragment.findNavController(OptionFragment.this)
+        NavHostFragment.findNavController(QuestionFiveFragment.this)
                 .navigate(R.id.ScoreFragment);
     }
 
@@ -128,16 +128,16 @@ public class OptionFragment extends Fragment {
 
             JSONArray options = questionOne.getJSONArray("options");
             items.add(0,
-                    new PlaceholderContent.PlaceholderItem("0", options.getString(0), "")
+                    new OptionItem("0", options.getString(0))
             );
             items.add(1,
-                    new PlaceholderContent.PlaceholderItem("1", options.getString(1), "")
+                    new OptionItem("1", options.getString(1))
             );
             items.add(2,
-                    new PlaceholderContent.PlaceholderItem("2", options.getString(2), "")
+                    new OptionItem("2", options.getString(2))
             );
             items.add(3,
-                    new PlaceholderContent.PlaceholderItem("3", options.getString(3), "")
+                    new OptionItem("3", options.getString(3))
             );
 
             View view = binding.listQuestionFiveOptions;
