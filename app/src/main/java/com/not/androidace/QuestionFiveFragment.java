@@ -104,7 +104,6 @@ public class QuestionFiveFragment extends Fragment {
         return binding.getRoot();
     }
 
-
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -114,6 +113,7 @@ public class QuestionFiveFragment extends Fragment {
 
         myOptionRecyclerViewAdapter.setOnItemClickListener((int position) -> myOptionRecyclerViewAdapter.setSelectedPosition(position));
     }
+
     public void moveToResults() {
         mBoundQuestionService.markQuestion(5, responseNumber);
 
