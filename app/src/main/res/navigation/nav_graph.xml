@@ -3,26 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/WelcomeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.nathan_trowers.androidace.FirstFragment"
+        android:id="@+id/WelcomeFragment"
+        android:name="com.not.androidace.WelcomeFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_question">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+        tools:layout="@layout/fragment_welcome">
     </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.nathan_trowers.androidace.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_answer">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+    <fragment
+        android:id="@+id/QuestionOneFragment"
+        android:name="com.not.androidace.QuestionOneFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_question_one">
+    </fragment>
+
+    <fragment
+        android:id="@+id/QuestionTwoFragment"
+        android:name="com.not.androidace.QuestionTwoFragment"
+        android:label="@string/question_two_fragment_label"
+        tools:layout="@layout/fragment_question_two">
+    </fragment>
+
+    <fragment
+        android:id="@+id/QuestionThreeFragment"
+        android:name="com.not.androidace.QuestionThreeFragment"
+        android:label="@string/question_three_fragment_label"
+        tools:layout="@layout/fragment_question_three">
+    </fragment>
+
+    <fragment
+        android:id="@+id/QuestionFourFragment"
+        android:name="com.not.androidace.QuestionFourFragment"
+        android:label="@string/question_four_fragment_label"
+        tools:layout="@layout/fragment_question_four">
+    </fragment>
+
+    <fragment
+        android:id="@+id/QuestionFiveFragment"
+        android:name="com.not.androidace.QuestionFiveFragment"
+        android:label="@string/option_fragment_label"
+        tools:layout="@layout/fragment_question_five">
+    </fragment>
+
+    <fragment
+        android:id="@+id/ScoreFragment"
+        android:name="com.not.androidace.ScoreFragment"
+        android:label="@string/score_fragment_label"
+        tools:layout="@layout/fragment_score">
     </fragment>
 </navigation>

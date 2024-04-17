@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/accentColor"
+    tools:context=".QuestionFiveFragment">
+
+    <TextView
+        android:id="@+id/textview_question_5"
+        android:layout_width="@dimen/list_view_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/textview_question_margin_bottom"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_weight="1"
+        android:text="@string/question_placeholder_text"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/title_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_question_five_options"
+        android:name="com.not.androidace.OptionFragment"
+        android:layout_width="@dimen/list_view_width"
+        android:layout_height="@dimen/list_view_height"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/fragment_option" />
+
+    <Button
+        android:id="@+id/button_score_next"
+        android:layout_marginTop="@dimen/next_button_margin_bottom"
+        android:layout_marginBottom="@dimen/next_button_margin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_linear_layout_next_text_size"
+        android:layout_weight="0.5"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@color/primaryColor"
+        android:textSize="@dimen/checkbox_text_size"
+        android:text="@string/next_question"
+        app:backgroundTint="@null"/>
+</LinearLayout>

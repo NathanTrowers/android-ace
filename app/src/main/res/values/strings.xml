@@ -1,25 +1,32 @@
 <resources>
     <string name="app_name">AndroidAce</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
-
-<!--    Words for Question 11 pictures-->
-    <string name="chip">Chip Button</string>
-    <string name="button">Button</string>
-    <string name="textView">Text View</string>
-    <string name="seekBar">Seek Bar</string>
-
-<!--Words for the 'submit', 'next question' and 'finish' buttons-->
-    <string name="submit">Submit</string>
+<!--  Strings for AndroidManifest.xml  -->
+    <string name="question_service_description">Gets quiz questions and marks responses</string>
+<!-- Strings used by fragments for navigation -->
+    <string name="first_fragment_label">Welcome</string>
+    <string name="second_fragment_label">Question 1</string>
+    <string name="question_two_fragment_label">Question 2</string>
+    <string name="question_three_fragment_label">Question 3</string>
+    <string name="question_four_fragment_label">Question 4</string>
+    <string name="option_fragment_label">Question 5</string>
+    <string name="score_fragment_label">Quiz Results</string>
+<!--  For Multiple Fragments  -->
     <string name="next_question">Next Question</string>
-    <string name="finish_quiz">See Results</string>
-
+    <string name="question_placeholder_text">Waiting for question to appear…</string>
+    <string name="option_placeholder_text">Finding option…</string>
+<!--  FirstFragment  -->
+    <string name="welcome_text_view_message">WELCOME TO ANDROIDACE!</string>
+    <string name="start_button_text">START A QUIZ</string>
+<!-- ScoreFragment -->
+    <string name="score_intro_text">Your final score is:</string>
+    <string name="score_placeholder_text">drum roll…</string>
+    <string-array name="results_messages_array">
+        <item>Please try again.</item>
+        <item>Good job!</item>
+        <item>Excellent work!</item>
+        <item>You are a genius!</item>
+    </string-array>
+    <string name="button_quiz_try_again_label">TRY AGAIN</string>
+    <string name="button_quiz_take_another_quiz_label">TAKE ANOTHER QUIZ</string>
 </resources>
